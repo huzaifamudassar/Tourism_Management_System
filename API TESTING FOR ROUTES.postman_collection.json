@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "e1987709-ae33-4405-b107-a0835e8ded15",
+		"name": "API TESTING FOR ROUTES",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39588844"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/visitors",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"John Abraham\",\r\n  \"email\": \"john.abraham@example.com\",\r\n  \"visitedAttractions\": [\"676e8a713cfc06876d7d0289\"]\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/visitors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"visitors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/reviews",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"attraction\": \"676e8a713cfc06876d7d0289\",\r\n  \"visitor\": \"676e8b6a3cfc06876d7d028d\",\r\n  \"score\": 4,\r\n  \"comment\": \"Amazing experience!\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/attractions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"TIMES SQUARE\",\r\n  \"location\": \"NEW YORK, USA\",\r\n  \"entryFee\": 20\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/attractions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"attractions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
